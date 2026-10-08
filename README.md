@@ -1,3 +1,5 @@
+[![CI](https://github.com/dfranco54/discoclub/actions/workflows/ci.yml/badge.svg)](https://github.com/dfranco54/discoclub/actions/workflows/ci.yml)
+
 # Discoclub
 
 Backend for a movie rental service (think of a modern video club): limited copies,

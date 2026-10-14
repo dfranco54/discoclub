@@ -34,7 +34,7 @@ export class DuplicateEmailError extends Error {
   }
 }
 
-function toUser(row: UserRow): User {
+function toUser(row: Omit<UserRow, 'password_hash'>): User {
   return {
     id: row.id,
     email: row.email,
@@ -97,4 +97,16 @@ export async function findUserByEmail(email: string): Promise<UserWithHash | nul
   const row = rows[0];
   if (!row) return null;
   return { ...toUser(row), passwordHash: row.password_hash };
+}
+
+export async function findUserById(id: string): Promise<User | null> {
+  const { rows } = await pool.query<Omit<UserRow, 'password_hash'>>(
+    `SELECT id, email, name, role, created_at
+    FROM users
+    WHERE id = $1`,
+    [id],
+  );
+
+  const row = rows[0];
+  return row ? toUser(row) : null;
 }

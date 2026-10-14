@@ -20,6 +20,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/cookie-parser": "^1.4.10",
     "@types/express": "^5.0.6",
     "@types/node": "^26.6.4",
     "@types/pg": "^8.23.1",
@@ -31,8 +32,10 @@
   },
   "dependencies": {
     "argon2": "^0.45.1",
+    "cookie-parser": "^1.4.7",
     "dotenv": "^18.0.5",
     "express": "^5.2.1",
+    "jose": "^6.2.12",
     "pg": "^8.23.1",
     "zod": "^4.6.7"
   }

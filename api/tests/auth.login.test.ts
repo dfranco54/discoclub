@@ -4,8 +4,9 @@ import { afterAll, beforeEach, describe, expect, it } from 'vitest';
 import { buildApp } from '../src/app.js';
 import { config } from '../src/config.js';
 import { pool } from '../src/db/pool.js';
+import { noLimiters } from '../src/middleware/rate-limit.js';
 
-const app = buildApp();
+const app = buildApp({ authLimiters: noLimiters });
 const credentials = { email: 'ana@test.com', password: 'correct-horse-battery', name: 'Ana' };
 
 async function registerUser(role?: 'STAFF' | 'ADMIN'): Promise<void> {

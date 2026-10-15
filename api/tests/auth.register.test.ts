@@ -4,8 +4,9 @@ import { buildApp } from '../src/app.js';
 import { pool } from '../src/db/pool.js';
 import { verifyPassword } from '../src/lib/password.js';
 import { findUserByEmail } from '../src/modules/users/users.repository.js';
+import { noLimiters } from '../src/middleware/rate-limit.js';
 
-const app = buildApp();
+const app = buildApp({ authLimiters: noLimiters });
 const valid = { email: 'ana@test.com', password: 'correct-horse-battery', name: 'Ana' };
 
 beforeEach(async () => {

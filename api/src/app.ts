@@ -6,6 +6,7 @@ import { errorHandler } from './middleware/error-handler.js';
 import { type AuthLimiters, createAuthLimiters } from './middleware/rate-limit.js';
 import { adminRouter } from './modules/admin/admin.routes.js';
 import { authRouter } from './modules/auth/auth.routes.js';
+import { moviesRouter } from './modules/movies/movies.routes.js';
 
 export interface AppOptions {
   // Injectable so tests can use their own limits (secure by default)
@@ -37,17 +38,18 @@ export function buildApp(options: AppOptions = {}): Express {
   // to the matching route in authRouter.
   app.post('/auth/login', limiters.login);
   app.post('/auth/register', limiters.register);
-
+  
   app.use('/auth', authRouter);
   app.use('/admin', adminRouter);
+  app.use('/movies', moviesRouter);
 
   // 404 handler: runs only if no route above matched
   app.use((_req: Request, res: Response) => {
     res.status(404).json({ error: 'Not Found' });
   });
-
+  
   // Must be registered last
   app.use(errorHandler);
-
+  
   return app;
 }

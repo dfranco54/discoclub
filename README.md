@@ -18,10 +18,11 @@ due dates, waiting lists and late fees.
 - Movie catalog loaded from a validated seed dataset, plus the `copies` schema
 - Integration tests against a real PostgreSQL database
 - CI with GitHub Actions: typecheck, build and tests on every push and pull request
+- Catalog endpoints: search, filters and pagination
 
 ## Planned
 
-- Catalog endpoints: search, filters and pagination
+
 - Copies management for staff and admins
 - Rentals with protection against two users renting the last copy at the same time
 - Waiting list, scheduled jobs and late fees
@@ -88,6 +89,8 @@ Check it works: `curl http://localhost:3000/health`
 | GET | `/auth/me` | authenticated | Current user |
 | POST | `/auth/logout` | any | Clears the session cookie |
 | GET | `/admin/ping` | `ADMIN` | Probe route used to test role protection |
+| GET | `/movies` | public | List the catalog. Query: `q` (title or director), `genre`, `limit` (1-50, default 20), `cursor` |
+| GET | `/movies/:slug` | public | Movie detail, including its number of active copies |
 
 ## Testing
 
@@ -150,6 +153,11 @@ reproducible.
   an advisory lock so two processes can't migrate at the same time.
 - **`buildApp()` is separate from `server.ts`**, so tests can exercise the app without opening a port.
 - **Secure by default.** Rate limiting is on unless a test explicitly turns it off.
+- **Keyset (cursor) pagination instead of OFFSET.** Cost stays constant on deep pages and results
+  don't shift when rows are added or removed. The order is total (`title`, then `slug` as a
+  tie-breaker). Trade-off: you can only move forward, not jump to page N, and there is no total count.
+- **Dynamic filters without SQL injection.** The query is assembled from fixed fragments and
+  numbered placeholders; user input only ever travels as parameters, and LIKE wildcards are escaped.
 
 ## Project structure
 

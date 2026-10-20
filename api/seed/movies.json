@@ -1,0 +1,322 @@
+[
+  {
+    "slug": "the-godfather",
+    "title": "The Godfather",
+    "year": 1972,
+    "director": "Francis Ford Coppola",
+    "genres": ["Crime", "Drama"],
+    "overview": "The aging head of a New York crime family tries to hand his empire to his reluctant youngest son."
+  },
+  {
+    "slug": "pulp-fiction",
+    "title": "Pulp Fiction",
+    "year": 1994,
+    "director": "Quentin Tarantino",
+    "genres": ["Crime", "Drama"],
+    "overview": "Intertwined stories of two hitmen, a boxer and a crime boss's wife unfold in a darkly funny tour of Los Angeles."
+  },
+  {
+    "slug": "the-shawshank-redemption",
+    "title": "The Shawshank Redemption",
+    "year": 1994,
+    "director": "Frank Darabont",
+    "genres": ["Drama"],
+    "overview": "A banker sentenced to life for a murder he denies finds hope and friendship inside a harsh prison."
+  },
+  {
+    "slug": "forrest-gump",
+    "title": "Forrest Gump",
+    "year": 1994,
+    "director": "Robert Zemeckis",
+    "genres": ["Drama", "Romance"],
+    "overview": "A kind-hearted man with a low IQ stumbles through decades of American history while never giving up on the woman he loves."
+  },
+  {
+    "slug": "the-matrix",
+    "title": "The Matrix",
+    "year": 1999,
+    "director": "Lana Wachowski, Lilly Wachowski",
+    "genres": ["Sci-Fi", "Action"],
+    "overview": "A hacker discovers that everyday reality is a simulation and joins a rebellion against the machines that run it."
+  },
+  {
+    "slug": "fight-club",
+    "title": "Fight Club",
+    "year": 1999,
+    "director": "David Fincher",
+    "genres": ["Drama", "Thriller"],
+    "overview": "A sleepless office worker and a charismatic soap salesman start an underground fighting club that grows far beyond their control."
+  },
+  {
+    "slug": "jurassic-park",
+    "title": "Jurassic Park",
+    "year": 1993,
+    "director": "Steven Spielberg",
+    "genres": ["Adventure", "Sci-Fi"],
+    "overview": "A theme park of cloned dinosaurs turns deadly when its security systems fail during a visit by a small group of guests."
+  },
+  {
+    "slug": "back-to-the-future",
+    "title": "Back to the Future",
+    "year": 1985,
+    "director": "Robert Zemeckis",
+    "genres": ["Adventure", "Comedy", "Sci-Fi"],
+    "overview": "A teenager is accidentally sent to 1955 in a time-traveling car and must make sure his parents fall in love."
+  },
+  {
+    "slug": "alien",
+    "title": "Alien",
+    "year": 1979,
+    "director": "Ridley Scott",
+    "genres": ["Horror", "Sci-Fi"],
+    "overview": "The crew of a commercial spaceship answers a distress call and brings aboard a deadly organism."
+  },
+  {
+    "slug": "blade-runner",
+    "title": "Blade Runner",
+    "year": 1982,
+    "director": "Ridley Scott",
+    "genres": ["Sci-Fi", "Thriller"],
+    "overview": "In a rain-soaked future Los Angeles, a retired officer is pulled back in to hunt rogue androids who want more life."
+  },
+  {
+    "slug": "the-silence-of-the-lambs",
+    "title": "The Silence of the Lambs",
+    "year": 1991,
+    "director": "Jonathan Demme",
+    "genres": ["Crime", "Thriller"],
+    "overview": "A young FBI trainee seeks help from an imprisoned, brilliant killer to catch another murderer on the loose."
+  },
+  {
+    "slug": "goodfellas",
+    "title": "Goodfellas",
+    "year": 1990,
+    "director": "Martin Scorsese",
+    "genres": ["Crime", "Drama"],
+    "overview": "The rise and fall of a young man inside the New York mob, told over several decades."
+  },
+  {
+    "slug": "taxi-driver",
+    "title": "Taxi Driver",
+    "year": 1976,
+    "director": "Martin Scorsese",
+    "genres": ["Crime", "Drama"],
+    "overview": "A lonely night-shift cab driver in New York grows increasingly alienated and unstable."
+  },
+  {
+    "slug": "psycho",
+    "title": "Psycho",
+    "year": 1960,
+    "director": "Alfred Hitchcock",
+    "genres": ["Horror", "Thriller"],
+    "overview": "A woman on the run stops at an isolated motel run by a shy young man and his domineering mother."
+  },
+  {
+    "slug": "vertigo",
+    "title": "Vertigo",
+    "year": 1958,
+    "director": "Alfred Hitchcock",
+    "genres": ["Mystery", "Thriller"],
+    "overview": "A retired detective with a fear of heights is hired to follow a mysterious woman and becomes dangerously obsessed."
+  },
+  {
+    "slug": "casablanca",
+    "title": "Casablanca",
+    "year": 1942,
+    "director": "Michael Curtiz",
+    "genres": ["Drama", "Romance"],
+    "overview": "In wartime Morocco, a cynical cafe owner must choose between an old love and the fight against tyranny."
+  },
+  {
+    "slug": "citizen-kane",
+    "title": "Citizen Kane",
+    "year": 1941,
+    "director": "Orson Welles",
+    "genres": ["Drama", "Mystery"],
+    "overview": "Reporters try to understand the life of a powerful newspaper tycoon through the meaning of his last word."
+  },
+  {
+    "slug": "the-shining",
+    "title": "The Shining",
+    "year": 1980,
+    "director": "Stanley Kubrick",
+    "genres": ["Horror"],
+    "overview": "A writer takes a winter caretaker job at an isolated hotel while the place slowly pushes his family toward terror."
+  },
+  {
+    "slug": "apocalypse-now",
+    "title": "Apocalypse Now",
+    "year": 1979,
+    "director": "Francis Ford Coppola",
+    "genres": ["War", "Drama"],
+    "overview": "During the Vietnam War, a captain travels upriver on a mission to find a rogue colonel."
+  },
+  {
+    "slug": "star-wars-a-new-hope",
+    "title": "Star Wars: Episode IV - A New Hope",
+    "year": 1977,
+    "director": "George Lucas",
+    "genres": ["Sci-Fi", "Adventure"],
+    "overview": "A farm boy, a smuggler and a princess join forces to fight a galactic empire and its planet-sized weapon."
+  },
+  {
+    "slug": "raiders-of-the-lost-ark",
+    "title": "Raiders of the Lost Ark",
+    "year": 1981,
+    "director": "Steven Spielberg",
+    "genres": ["Adventure", "Action"],
+    "overview": "Archaeologist and adventurer Indiana Jones races the Nazis to find the legendary Ark of the Covenant."
+  },
+  {
+    "slug": "jaws",
+    "title": "Jaws",
+    "year": 1975,
+    "director": "Steven Spielberg",
+    "genres": ["Thriller", "Adventure"],
+    "overview": "A seaside town's police chief, a scientist and a fisherman hunt a giant shark that is terrorizing the beaches."
+  },
+  {
+    "slug": "schindlers-list",
+    "title": "Schindler's List",
+    "year": 1993,
+    "director": "Steven Spielberg",
+    "genres": ["Drama", "History"],
+    "overview": "A German businessman in occupied Poland gradually risks everything to save the Jewish workers of his factory."
+  },
+  {
+    "slug": "terminator-2-judgment-day",
+    "title": "Terminator 2: Judgment Day",
+    "year": 1991,
+    "director": "James Cameron",
+    "genres": ["Action", "Sci-Fi"],
+    "overview": "A reprogrammed cyborg protects a boy from a more advanced killing machine sent from the future."
+  },
+  {
+    "slug": "the-fellowship-of-the-ring",
+    "title": "The Lord of the Rings: The Fellowship of the Ring",
+    "year": 2001,
+    "director": "Peter Jackson",
+    "genres": ["Fantasy", "Adventure"],
+    "overview": "A hobbit and eight companions set out to destroy a powerful ring before a dark lord can reclaim it."
+  },
+  {
+    "slug": "spirited-away",
+    "title": "Spirited Away",
+    "year": 2001,
+    "director": "Hayao Miyazaki",
+    "genres": ["Animation", "Fantasy"],
+    "overview": "A girl wanders into a spirit world and must work in a bathhouse to free her parents and find her way home."
+  },
+  {
+    "slug": "seven-samurai",
+    "title": "Seven Samurai",
+    "year": 1954,
+    "director": "Akira Kurosawa",
+    "genres": ["Action", "Drama"],
+    "overview": "Poor villagers hire seven masterless warriors to defend their harvest from bandits in feudal Japan."
+  },
+  {
+    "slug": "parasite",
+    "title": "Parasite",
+    "year": 2019,
+    "director": "Bong Joon-ho",
+    "genres": ["Thriller", "Drama"],
+    "overview": "A struggling family schemes its way into the lives of a wealthy household, with consequences nobody expects."
+  },
+  {
+    "slug": "amelie",
+    "title": "Amélie",
+    "year": 2001,
+    "director": "Jean-Pierre Jeunet",
+    "genres": ["Comedy", "Romance"],
+    "overview": "A shy Parisian waitress secretly sets out to improve the lives of those around her, then must decide what to do about her own."
+  },
+  {
+    "slug": "pans-labyrinth",
+    "title": "Pan's Labyrinth",
+    "year": 2006,
+    "director": "Guillermo del Toro",
+    "genres": ["Fantasy", "Drama"],
+    "overview": "In 1944 Spain, a girl escapes a brutal military outpost through a fantasy world full of dangerous tasks."
+  },
+  {
+    "slug": "city-of-god",
+    "title": "City of God",
+    "year": 2002,
+    "director": "Fernando Meirelles, Kátia Lund",
+    "genres": ["Crime", "Drama"],
+    "overview": "Two boys grow up in a Rio de Janeiro favela, one becoming a photographer and the other a drug lord."
+  },
+  {
+    "slug": "amores-perros",
+    "title": "Amores perros",
+    "year": 2000,
+    "director": "Alejandro González Iñárritu",
+    "genres": ["Drama", "Crime"],
+    "overview": "A car crash in Mexico City links three stories of love, loyalty and loss across different social worlds."
+  },
+  {
+    "slug": "embrace-of-the-serpent",
+    "title": "Embrace of the Serpent",
+    "year": 2015,
+    "director": "Ciro Guerra",
+    "genres": ["Adventure", "Drama"],
+    "overview": "Across decades, two scientists search for a sacred plant in the Amazon guided by the same shaman."
+  },
+  {
+    "slug": "birds-of-passage",
+    "title": "Birds of Passage",
+    "year": 2018,
+    "director": "Ciro Guerra, Cristina Gallego",
+    "genres": ["Crime", "Drama"],
+    "overview": "A Wayuu family in northern Colombia is drawn into the marijuana trade, and its traditions begin to unravel."
+  },
+  {
+    "slug": "the-secret-in-their-eyes",
+    "title": "The Secret in Their Eyes",
+    "year": 2009,
+    "director": "Juan José Campanella",
+    "genres": ["Mystery", "Drama"],
+    "overview": "A retired Argentine legal investigator revisits an unsolved murder case that has haunted him for 25 years."
+  },
+  {
+    "slug": "the-dark-knight",
+    "title": "The Dark Knight",
+    "year": 2008,
+    "director": "Christopher Nolan",
+    "genres": ["Action", "Crime"],
+    "overview": "Batman faces the Joker, a chaotic criminal who pushes Gotham's heroes and citizens to their limits."
+  },
+  {
+    "slug": "inception",
+    "title": "Inception",
+    "year": 2010,
+    "director": "Christopher Nolan",
+    "genres": ["Sci-Fi", "Action"],
+    "overview": "A thief who steals secrets through dreams is offered a chance to plant an idea instead."
+  },
+  {
+    "slug": "mad-max-fury-road",
+    "title": "Mad Max: Fury Road",
+    "year": 2015,
+    "director": "George Miller",
+    "genres": ["Action", "Adventure"],
+    "overview": "In a desert wasteland, a drifter and a rebel warrior flee a tyrant across a relentless chase."
+  },
+  {
+    "slug": "toy-story",
+    "title": "Toy Story",
+    "year": 1995,
+    "director": "John Lasseter",
+    "genres": ["Animation", "Comedy"],
+    "overview": "A cowboy doll feels threatened when a flashy space ranger toy becomes their owner's new favorite."
+  },
+  {
+    "slug": "whiplash",
+    "title": "Whiplash",
+    "year": 2014,
+    "director": "Damien Chazelle",
+    "genres": ["Drama", "Music"],
+    "overview": "A young drummer at an elite music school faces an abusive instructor who pushes him to the edge."
+  }
+]

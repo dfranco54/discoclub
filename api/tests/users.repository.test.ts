@@ -10,7 +10,7 @@ const input = { email: 'ana@test.com', passwordHash: 'not-a-real-hash', name: 'A
 
 // Every test starts from an empty table, so tests can't affect each other
 beforeEach(async () => {
-  await pool.query('TRUNCATE users');
+  await pool.query('TRUNCATE users CASCADE');
 });
 
 afterAll(async () => {

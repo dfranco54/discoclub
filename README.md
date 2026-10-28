@@ -19,12 +19,12 @@ due dates, waiting lists and late fees.
 - Integration tests against a real PostgreSQL database
 - CI with GitHub Actions: typecheck, build and tests on every push and pull request
 - Catalog endpoints: search, filters and pagination
+- Copies management for staff and admins
+- Rental engine: concurrency-safe renting and returning (not exposed through the API yet)
+- Rentals with protection against two users renting the last copy at the same time
 
 ## Planned
 
-
-- Copies management for staff and admins
-- Rentals with protection against two users renting the last copy at the same time
 - Waiting list, scheduled jobs and late fees
 - OpenAPI documentation, structured logging, refresh tokens
 - React frontend and public deployment
@@ -78,7 +78,7 @@ Check it works: `curl http://localhost:3000/health`
 | `npm test` | Run the tests (Docker must be running) |
 | `npm run db:migrate` | Apply pending SQL migrations |
 | `npm run catalog:seed` | Load or refresh the movie catalog |
-
+| `npm run dev:stock` | Create fake development stock, safe to re-run; refuses to run in production |
 ## API
 
 | Method | Path | Access | Description |
@@ -91,6 +91,9 @@ Check it works: `curl http://localhost:3000/health`
 | GET | `/admin/ping` | `ADMIN` | Probe route used to test role protection |
 | GET | `/movies` | public | List the catalog. Query: `q` (title or director), `genre`, `limit` (1-50, default 20), `cursor` |
 | GET | `/movies/:slug` | public | Movie detail, including its number of active copies |
+| GET | `/movies/:slug/copies` | `STAFF`, `ADMIN` | List every copy of a movie, retired ones included |
+| POST | `/movies/:slug/copies` | `STAFF`, `ADMIN` | Add 1-20 copies of a format |
+| PATCH | `/copies/:id` | `STAFF`, `ADMIN` | Retire (`RETIRED`) or reinstate (`ACTIVE`) a copy |
 
 ## Testing
 
@@ -158,6 +161,19 @@ reproducible.
   tie-breaker). Trade-off: you can only move forward, not jump to page N, and there is no total count.
 - **Dynamic filters without SQL injection.** The query is assembled from fixed fragments and
   numbered placeholders; user input only ever travels as parameters, and LIKE wildcards are escaped.
+- **Copies are retired, never deleted.** Rentals will keep history that references each copy, and the
+  foreign key (`ON DELETE RESTRICT`) enforces it. Retiring is idempotent.
+- **Authentication is applied per route** where a router is mounted at the app root, so unknown URLs
+  still answer 404 instead of 401.
+- **Rentals are concurrency-safe by design (defense in layers).** Row locks (`SELECT ... FOR UPDATE`
+  on the user, then the movie) serialize competing transactions, so a loser gets a clean business
+  error. A partial unique index (`ONE ACTIVE rental per copy`) makes double-renting impossible even if
+  the application code had a bug. Tests fire simultaneous requests at the last copy, and also bypass
+  the code to hit the database directly.
+- **Locking the movie row is the simple option.** `SKIP LOCKED` would allow more throughput at the cost
+  of subtler reasoning (stale statement snapshots plus retry logic); I would measure before adopting it.
+- **"Overdue" is derived, not stored**, like availability: a stored flag would be wrong between the due
+  date and the moment some job flips it.
 
 ## Project structure
 

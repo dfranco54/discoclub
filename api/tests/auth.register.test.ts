@@ -10,7 +10,7 @@ const app = buildApp({ authLimiters: noLimiters });
 const valid = { email: 'ana@test.com', password: 'correct-horse-battery', name: 'Ana' };
 
 beforeEach(async () => {
-  await pool.query('TRUNCATE users');
+  await pool.query('TRUNCATE users CASCADE');
 });
 
 afterAll(async () => {

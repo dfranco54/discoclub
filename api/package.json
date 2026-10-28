@@ -15,7 +15,8 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "db:migrate": "tsx src/db/migrate.ts",
-    "catalog:seed": "tsx src/scripts/seed-movies.ts"
+    "catalog:seed": "tsx src/scripts/seed-movies.ts",
+    "dev:stock": "tsx src/scripts/seed-dev-stock.ts"
   },
   "keywords": [],
   "author": "",

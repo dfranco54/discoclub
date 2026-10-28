@@ -5,7 +5,7 @@ import { pool } from '../src/db/pool.js';
 import { createAuthLimiters } from '../src/middleware/rate-limit.js';
 
 beforeEach(async () => {
-  await pool.query('TRUNCATE users');
+  await pool.query('TRUNCATE users CASCADE');
 });
 
 afterAll(async () => {

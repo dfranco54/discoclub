@@ -38,7 +38,7 @@ async function forgeToken(opts: { secret: string; issuedAt: number; expiresAt: n
 }
 
 beforeEach(async () => {
-  await pool.query('TRUNCATE users');
+  await pool.query('TRUNCATE users CASCADE');
 });
 
 afterAll(async () => {
